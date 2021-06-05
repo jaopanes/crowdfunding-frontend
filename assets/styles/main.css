@@ -1,0 +1,435 @@
+header {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/image-hero-desktop.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+
+/* nav */
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    position: relative;
+}
+
+nav .container--nav {
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 65px;
+}
+
+nav ul>li {
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+/* main */
+
+main {
+    width: calc(100% - 30px);
+    max-width: 708px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+
+/* section crowfund */
+
+#crowfund {
+    margin-top: -100px;
+}
+
+#crowfund img {
+    margin-top: -70px;
+}
+
+#crowfund .title {
+    font-size: 1.75rem;
+    margin-top: 24px;
+}
+
+#crowfund .description {
+    opacity: 0.6;
+    margin-top: 16px;
+}
+
+#crowfund .buttons--base {
+    width: 100%;
+    margin-top: 46px;
+}
+
+#crowfund .buttons--base button {
+    height: 55px;
+    font-weight: 700;
+    border-radius: 55px;
+}
+
+#crowfund .buttons--base button.back {
+    background-color: var(--cyan);
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 0 35px;
+    transition: background-color 0.2s;
+}
+
+#crowfund .buttons--base button.back:hover {
+    background-color: var(--dark-cryan);
+}
+
+#crowfund .buttons--base button.bookmark {
+    color: var(--dark-gray);
+    background-color: #EEE;
+    font-size: 1rem;
+    padding-right: 24px;
+}
+
+#crowfund .buttons--base button.bookmark::before {
+    content: '';
+    width: 56px;
+    height: 56px;
+    background-image: url(../images/icon-bookmark.svg);
+    margin-right: 16px;
+    transition: all 0.2s;
+}
+
+#crowfund .buttons--base button.bookmark:hover::before {
+    opacity: 0.6;
+}
+
+#crowfund .buttons--base button.bookmark[marked] {
+    color: var(--dark-cryan);
+}
+
+#crowfund .buttons--base button.bookmark[marked]::before {
+    background-image: url(../images/icon-bookmarked.svg);
+}
+
+
+/* section info */
+
+#info .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+#info .item-grid {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#info .item-grid:last-child {
+    border-right: none;
+}
+
+#info .item-grid strong {
+    font-size: 2rem;
+}
+
+#info .item-grid span {
+    opacity: 0.6;
+    margin-top: 8px;
+}
+
+#info .progress {
+    position: relative;
+    width: 100%;
+    border-radius: 50px;
+    height: 12px;
+    background-color: #EEE;
+    margin-top: 40px;
+}
+
+#info .progress .bar {
+    position: absolute;
+    border-radius: 50px;
+    height: 12px;
+    background-color: var(--cyan);
+}
+
+
+/* section about */
+
+#about h1 {
+    font-size: 1.25rem;
+}
+
+#about p {
+    opacity: 0.7;
+    margin-top: 24px;
+    font-size: 1rem;
+    line-height: 32px;
+}
+
+#about .card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 32px;
+    margin-top: 24px;
+}
+
+#about .card .title {
+    font-size: 1rem;
+}
+
+#about .card .title span {
+    font-size: 0.95rem;
+    color: var(--cyan);
+    font-weight: 500;
+}
+
+#about .card .qnt {
+    font-size: 2rem;
+}
+
+#about .card p {
+    margin-bottom: 24px;
+}
+
+#about .card .qnt span {
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin-left: 8px;
+}
+
+#about .card .select {
+    height: 50px;
+    background-color: var(--cyan);
+    color: var(--white);
+    font-weight: 700;
+    padding: 0 35px;
+    border-radius: 50px;
+    transition: background-color 0.2s;
+}
+
+#about .card .select:hover {
+    background-color: var(--dark-cryan);
+}
+
+#about .card.out-stock {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+
+/* modal */
+
+.modal-base .content-modal .title-content {
+    font-size: 1.5rem;
+}
+
+.modal-base .content-modal .desc-content {
+    margin-top: 16px;
+    opacity: 0.6;
+}
+
+.modal-base .select-base {
+    width: 100%;
+    position: relative;
+    margin-top: 24px;
+    float: left;
+}
+
+.modal-base .select-base.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.modal-base .select-base>input {
+    display: none;
+}
+
+.modal-base .select-base label {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 1px transparent;
+    float: left;
+    transition: all 0.2s;
+}
+
+.modal-base .select-base label .info-option {
+    padding: 24px;
+}
+
+.modal-base .select-base label .title-option {
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.modal-base .select-base:hover label .title-option {
+    color: var(--cyan);
+}
+
+.modal-base .select-base label .title-option .price {
+    color: var(--cyan);
+    margin-left: 8px;
+}
+
+.modal-base .select-base label .title-option .qnt {
+    color: #000;
+}
+
+.modal-base .select-base label .title-option .qnt span {
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.modal-base .select-base:hover label .title-option .qnt {
+    color: #000;
+}
+
+.modal-base .select-base label .desc-option {
+    opacity: 0.6;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    line-height: 24px;
+}
+
+.modal-base .select-base label .btn-select {
+    min-width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 24px;
+    transition: all 0.2s;
+}
+
+.modal-base .select-base label .btn-select::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: transparent;
+}
+
+.modal-base .select-base label:hover .btn-select {
+    border-color: var(--cyan);
+}
+
+.modal-base .select-base label .pladge-option p {
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
+.modal-base .select-base label .pladge-option .input-base {
+    position: relative;
+}
+
+.modal-base .select-base label .pladge-option .continue,
+.modal-base .select-base label .pladge-option input {
+    height: 46px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.modal-base .select-base label .pladge-option .continue {
+    color: var(--white);
+    background-color: var(--cyan);
+    margin-left: 16px;
+    padding: 0 35px;
+    transition: background-color 0.2s;
+}
+
+.modal-base .select-base label .pladge-option .continue:hover {
+    background-color: var(--dark-cryan);
+}
+
+.modal-base .select-base label .pladge-option input {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    padding-left: 44px;
+    max-width: 114px;
+    transition: border-color 0.2s;
+}
+
+.modal-base .select-base label .pladge-option input:hover,
+.modal-base .select-base label .pladge-option input:focus {
+    border-color: var(--cyan);
+}
+
+.modal-base .select-base label .pladge-option .input-base::before {
+    content: '$';
+    position: absolute;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    left: 24px;
+}
+
+.modal-base .select-base label .pladge-option {
+    padding: 32px 24px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.modal-base .select-base label .pladge-option.active {
+    display: flex;
+}
+
+.modal-base .select-base label .pladge-option.active {
+    display: flex;
+}
+
+.modal-base .select-base>input:checked+label {
+    box-shadow: 0 0 0 1px var(--cyan);
+    border: 1px solid var(--cyan);
+}
+
+.modal-base .select-base>input:checked+label .btn-select::before {
+    background-color: var(--cyan);
+}
+
+
+/* modal completed */
+
+.modal-completed .content-modal {
+    max-width: 550px;
+}
+
+.modal-completed h1 {
+    font-size: 1.5rem;
+}
+
+.modal-completed p {
+    text-align: center;
+    line-height: 28px;
+    opacity: 0.7;
+    margin-top: 16px;
+}
+
+.modal-completed button {
+    color: var(--white);
+    background-color: var(--cyan);
+    font-size: 0.95rem;
+    height: 50px;
+    padding: 0 30px;
+    font-weight: 700;
+    margin-top: 32px;
+    border-radius: 50px;
+    transition: background-color 0.2s
+}
+
+.modal-completed button:hover {
+    background-color: var(--dark-cryan);
+}
+
+.modal-completed img {
+    height: 90px;
+    margin-bottom: 32px;
+}

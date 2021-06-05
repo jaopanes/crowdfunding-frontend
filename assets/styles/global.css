@@ -1,0 +1,94 @@
+:root {
+    --white: #FFF;
+    --cyan: hsl(176, 50%, 47%);
+    --dark-cryan: hsl(176, 72%, 28%);
+    --dark-gray: hsl(0, 0%, 48%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+input::placeholder,
+select,
+textarea,
+button {
+    font-family: 'Commissioner';
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: inherit;
+}
+
+input,
+select,
+button,
+textarea {
+    border: 0;
+    padding: 0;
+    outline: none;
+}
+
+section {
+    border: 1px solid #EEE;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 46px;
+    margin-bottom: 16px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    background-color: #F4F4F4;
+}
+
+.modal-base {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.modal-base.modal-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-base .content-modal {
+    width: calc(100% - 30px);
+    max-width: 708px;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 46px;
+    position: relative;
+    margin-top: -20px;
+    transition: margin-top 0.2s;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.modal-base.modal-active .content-modal {
+    margin-top: 0;
+}
